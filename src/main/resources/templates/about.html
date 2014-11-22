@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index :: metaHeader">
+</head>
+<body>
+<nav th:replace="index :: nav"></nav>
+
+<header th:include="fragments/fragments :: introHeader('About Me' ,'This is who I am and what I do.')"
+        class="intro-header" style="background-image: url(img/yubeng-gray.jpg);" />
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <h2 class="section-heading">Welcome</h2>
+      <p>Hello there!</p>
+      <p>I am a web developer based on Singapore. I love travel, music, films. </p>
+      <p>This blog is created to write down the projects at my work and the skills used in project works,  I will create a new category about my travel experience if I have the time. </p>
+      <p>Some contents in this site are from Internet, please feel free to contact me if there is any copyright issue.</p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<section th:replace="index :: footer" id="footer"></section>
+</body>
+</html>

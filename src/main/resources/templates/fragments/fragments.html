@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" th:with="siteName='Wza Book'">
+
+<head th:fragment="metaHeader" th:with="siteName='Wza Book'">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title th:text="${pageTitle} ? ${siteName} + ' - ' + ${pageTitle} : ${siteName}"></title>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <img class="img-responsive" src="img/profile.png" alt="" />
+        <div class="intro-text">
+          <span class="name" th:text="${siteName}"></span>
+          <hr class="star-light" />
+          <span class="skills">Web Developer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<header th:fragment="introHeader(heading, subheading)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1 th:text="${heading}"></h1>
+          <hr class="small" />
+          <span class="subheading" th:text="${subheading}"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+</body>
+</html>

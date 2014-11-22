@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index :: metaHeader">
+</head>
+<body>
+<nav th:replace="index :: nav"></nav>
+
+<header th:include="fragments/fragments :: introHeader('Projects' ,'This is what I do in my work')"
+        class="intro-header" style="background-image: url(img/yubeng-gray.jpg);" />
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p style="text-align: center">Coming Soon!</p>
+    </div>
+  </div>
+</div>
+
+<section th:replace="index :: footer" id="footer"></section>
+</body>
+</html>
