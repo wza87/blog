@@ -36,7 +36,7 @@ echo "#################################################################"
 echo "Building Spring boot application"
 echo "#################################################################"
 cd /opt/wza-blog
-mvn package
+mvn clean install
 
 # remove lock file
 rm $lock_file

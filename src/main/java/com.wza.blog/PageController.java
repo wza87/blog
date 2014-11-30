@@ -7,7 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ProjectsController {
+public class PageController {
+
+  @RequestMapping("/")
+  public String Index() {
+    return "index";
+  }
+
+  @RequestMapping("/about")
+  public String About(Model model) {
+    String pageTitle = "About";
+    model.addAttribute("pageTitle", pageTitle );
+    return "about";
+  }
 
   @RequestMapping("/projects")
   public String Projects(@RequestParam(value="name", required=false, defaultValue="") String name, Model model) {
@@ -19,5 +31,7 @@ public class ProjectsController {
     model.addAttribute("name", name);
     return "projects";
   }
+
+
 
 }
