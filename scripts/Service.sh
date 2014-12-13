@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# chkconfig: 345 96 4
+
+
 JARFile="/opt/wza-blog/target/wza-blog-0.1.0.jar"
 PIDFile="/wza-blog/target/app.pid"
 SPRING_OPTS="-DLOG_FILE=/opt/wza-blog/target/application.log"
